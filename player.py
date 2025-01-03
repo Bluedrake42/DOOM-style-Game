@@ -34,10 +34,11 @@ class Player:
             self.game.new_game()
 
     def get_damage(self, damage):
-        self.health -= damage
-        self.game.object_renderer.player_damage()
-        self.game.sound.player_pain.play()
-        self.check_game_over()
+        if not GOD_MODE:  # Check if god mode is enabled
+            self.health -= damage
+            self.game.object_renderer.player_damage()
+            self.game.sound.player_pain.play()
+            self.check_game_over()
 
     def single_fire_event(self, event):
         if event.type == pg.MOUSEBUTTONDOWN:

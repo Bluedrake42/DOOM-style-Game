@@ -41,3 +41,5 @@ NPC_PAIN_VOLUME = 0.0
 NPC_DEATH_VOLUME = 0.0
 PLAYER_PAIN_VOLUME = 0.0
 SHOTGUN_VOLUME = 0.0
+
+GOD_MODE = True  # Set to True to enable god mode
